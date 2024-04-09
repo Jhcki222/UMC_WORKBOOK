@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function week1() {
+export default function week1_b() {
     return (
         <div>
-            1주차 내용
+            2번
         </div>
     );
 }
