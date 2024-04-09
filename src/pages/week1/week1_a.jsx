@@ -22,7 +22,7 @@ export default function Week1() {
             setNameMessage({ message: '필수 입력 항목입니다!', success: false });
             isValid = false;
         } else {
-            setNameMessage({ message: '이름이 유효합니다.', success: true });
+            setNameMessage({ message: '멋진 이름이네요!', success: true });
         }
 
         // 이메일 필드 유효성 검사
