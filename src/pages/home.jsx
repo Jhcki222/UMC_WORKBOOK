@@ -20,7 +20,7 @@ export default function home() {
         <button>1주차 미션 2번</button>
         </Link>
         </ButtonBox>
-      
+        <hr/>
         </Wrapper>
     );
 }
