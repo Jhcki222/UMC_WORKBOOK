@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/home';
-import Week1_A from './pages/week1/week1_a'
-import Week1_B from './pages/week1/week1_b'
+import Home from './pages/Home';
+import Week1_A from './pages/week1/Week1_a'
+import Week1_B from './pages/week1/Week1_b'
 import Counter from './pages/week1/Counter'
 
 function App() {
