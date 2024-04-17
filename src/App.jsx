@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import Week1_A from './pages/week1/Week1_a'
-import Week1_B from './pages/week1/Week1_b'
+import Week1A from './pages/week1/Week1A'
+import Week1B from './pages/week1/Week1B'
 import Counter from './pages/week1/Counter'
+import Week2B from './pages/week2/Week2B'
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/counter" element={<Counter/>}/>
-        <Route path="/week1_a" element={<Week1_A/>}/>
-        <Route path="/week1_b" element={<Week1_B/>}/>
+        <Route path="/week1a" element={<Week1A/>}/>
+        <Route path="/week1b" element={<Week1B/>}/>
+        <Route path="/week2b" element={<Week2B/>}/>
       </Routes>
     </Router>
   );

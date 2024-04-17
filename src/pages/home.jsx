@@ -13,11 +13,14 @@ export default function home() {
         <Link to ='/counter'>
         <button>1주차 실습 1번</button>
         </Link>
-        <Link to ='/week1_a'>
+        <Link to ='/week1a'>
         <button>1주차 미션 1번</button>
         </Link>
-        <Link to ='/week1_b'>
+        <Link to ='/week1b'>
         <button>1주차 미션 2번</button>
+        </Link>
+        <Link to ='/week2b'>
+        <button>2주차 미션 2번</button>
         </Link>
         </ButtonBox>
         <hr/>
