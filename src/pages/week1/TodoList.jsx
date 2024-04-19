@@ -144,13 +144,15 @@ const TodoContainer = styled.div`
 `;
 const List = styled.div`
     width : 15rem;
-    align-items : space-around;
+    align-items : space-between;
     margin-top : 3rem;
-    h3{
-        float : left;
-        width : 10rem;
-        border-bottom : 3px solid #90B1C3;
-      }
+    h3 {
+        float: none; 
+        width: auto; /* 너비를 자동으로 설정하여 텍스트에 맞게 설정 */
+        border-bottom: 3px solid #90B1C3;
+        text-align: left; /* 텍스트를 왼쪽으로 정렬 */
+        margin-right: 0;
+    }
 `;
 
 const CompleteButton = styled.button`

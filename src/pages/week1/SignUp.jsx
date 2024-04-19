@@ -221,10 +221,10 @@ const InputField = styled.input`
 
 const Message = styled.div` 
     
-        color: ${({ success }) => (success ? 'green' : 'red')};
-        font-size: 1.2rem;
-        font-weight: 800;
-        line-height: 100%; 
+    color: ${({ success }) => (success ? 'green' : 'red')};
+    font-size: 1.2rem;
+    font-weight: 800;
+    line-height: 100%; 
     
 `;
 
