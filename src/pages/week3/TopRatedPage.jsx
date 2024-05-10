@@ -39,7 +39,6 @@ const Wrapper = styled.div`
     background-color: #192c50;
     width: 100vw;
     height: 100%;
-    padding: 20px;
     color: #ffffff;
 `;
 

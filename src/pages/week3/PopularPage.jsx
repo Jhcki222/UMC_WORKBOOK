@@ -9,7 +9,7 @@ const PopularPage = () => {
 
     useEffect(() => {
         // TMDB API 요청을 보낼 URL
-        const API_KEY = 'd5b7149c32045a933d62bc087867582c'; 
+        const API_KEY = 'd5b7149c32045a933d62bc087867582c';
         const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`;
 
         // TMDB API로 영화 데이터 가져오기
@@ -40,7 +40,6 @@ const Wrapper = styled.div`
     background-color: #192c50;
     width: 100vw;
     height: 100%;
-    padding: 20px;
     color: #ffffff;
 `;
 

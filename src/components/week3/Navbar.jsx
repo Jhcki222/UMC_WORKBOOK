@@ -1,13 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Navbar = () => {
+    // 로그인 상태를 추적하기 위한 state 설정
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    // 로그인 버튼 클릭 시 로그인 상태 변경
+    const handleLogin = () => {
+        setIsLoggedIn(true);
+    };
+
+    // 로그아웃 버튼 클릭 시 로그인 상태 변경
+    const handleLogout = () => {
+        setIsLoggedIn(false);
+    };
+
     return (
         <Nav>
             <Logo to="/mainpage">UMC Movie</Logo>
             <Links>
-                <NavLink to="/signup">회원가입</NavLink>
+                {/* 로그인/로그아웃 상태에 따라 버튼 텍스트 변경 */}
+                {isLoggedIn ? (
+                    <NavLink onClick={handleLogout}>로그아웃</NavLink>
+                ) : (
+                    <NavLink onClick={handleLogin}>로그인</NavLink>
+                )}
                 <NavLink to="/popular">Popular</NavLink>
                 <NavLink to="/nowplaying">Now Playing</NavLink>
                 <NavLink to="/toprated">Top Rated</NavLink>
@@ -23,6 +41,7 @@ const Nav = styled.nav`
     width: 100%;
     height: 5rem;
     align-items: center;
+    padding-left: 10px;
     justify-content: space-between;
 `;
 
