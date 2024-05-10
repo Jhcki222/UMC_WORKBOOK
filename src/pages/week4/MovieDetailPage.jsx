@@ -47,7 +47,6 @@ const MovieDetailPage = () => {
     return (
         <Container>
             <Navbar />
-
             <DetailContainer>
                 <Poster src={getImageUrl(movie.poster_path)} alt={movie.title} />
                 <InfoWrapper>

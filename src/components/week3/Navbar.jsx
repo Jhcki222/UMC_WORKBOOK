@@ -19,12 +19,13 @@ const Navbar = () => {
         <Nav>
             <Logo to="/mainpage">UMC Movie</Logo>
             <Links>
-                {/* 로그인/로그아웃 상태에 따라 버튼 텍스트 변경 */}
+                {/* 로그인/로그아웃 상태에 따라 버튼 텍스트 변경
                 {isLoggedIn ? (
                     <NavLink onClick={handleLogout}>로그아웃</NavLink>
                 ) : (
                     <NavLink onClick={handleLogin}>로그인</NavLink>
-                )}
+                )} */}
+                <NavLink to="/signup">회원가입</NavLink>
                 <NavLink to="/popular">Popular</NavLink>
                 <NavLink to="/nowplaying">Now Playing</NavLink>
                 <NavLink to="/toprated">Top Rated</NavLink>

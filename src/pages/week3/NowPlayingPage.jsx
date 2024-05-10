@@ -38,7 +38,7 @@ const NowPlayingPage = () => {
 const Wrapper = styled.div`
     background-color: #192c50;
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     color: #ffffff;
 `;
 

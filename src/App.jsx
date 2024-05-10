@@ -12,7 +12,8 @@ import TopRatedPage from './pages/week3/TopRatedPage';
 import UpcomingPage from './pages/week3/Upcoming';
 import MovieDetailPage from './pages/week4/MovieDetailPage';
 import NotFoundPage from './pages/week4/NotFoundPage';
-
+import MovieSignup from './pages/week5/MovieSignup';
+import Navbar from './components/week3/Navbar';
 function App() {
     return (
         <Router>
@@ -20,7 +21,8 @@ function App() {
                 <Route path="*" element={<NotFoundPage />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/counter" element={<Counter />} />
-                <Route path="/signup" element={<SignUp />} />
+                <Route path="/week1signup" element={<SignUp />} />
+                <Route path="/signup" element={<MovieSignup />} />
                 <Route path="/todo" element={<Todo />} />
                 <Route path="/moviepage" element={<MoviePage />} />
                 <Route path="/mainpage" element={<MainPage />} />
