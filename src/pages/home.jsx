@@ -2,7 +2,7 @@ import React from 'react';
 import { styled } from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export default function home() {
+export default function Home() {
     return (
         <Wrapper>
             <h1>UMC WEB FRONT-END WORKBOOK</h1>
@@ -17,8 +17,11 @@ export default function home() {
                 <Link to="/todo">
                     <button>1주차 미션 2번</button>
                 </Link>
-                <Link to="/MoviePage">
+                <Link to="/moviepage">
                     <button>2주차 미션 2번</button>
+                </Link>
+                <Link to="/mainpage">
+                    <button>3주차 미션</button>
                 </Link>
             </ButtonBox>
             <hr />
