@@ -11,11 +11,13 @@ import NowPlayingPage from './pages/week3/NowPlayingPage';
 import TopRatedPage from './pages/week3/TopRatedPage';
 import UpcomingPage from './pages/week3/Upcoming';
 import MovieDetailPage from './pages/week4/MovieDetailPage';
+import NotFoundPage from './pages/week4/NotFoundPage';
 
 function App() {
     return (
         <Router>
             <Routes>
+                <Route path="*" element={<NotFoundPage />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/counter" element={<Counter />} />
                 <Route path="/signup" element={<SignUp />} />

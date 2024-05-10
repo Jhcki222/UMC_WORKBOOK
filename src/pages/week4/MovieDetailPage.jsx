@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-import { useParams } from 'react-router-dom'; // useParams 임포트
+import { useParams } from 'react-router-dom';
 import Navbar from '../../components/week3/Navbar';
 
 const MovieDetailPage = () => {
@@ -40,7 +40,7 @@ const MovieDetailPage = () => {
     };
 
     // 평점을 ⭐️으로 표시하기 위한 로직
-    const rating = Math.floor(movie.vote_average); // 평점을 내림하여 정수로 변환
+    const rating = Math.floor(movie.vote_average); //Math.floor함수를 이용해 소수점 버림(내림)
     const stars = Array.from({ length: rating }, (_, index) => index); // 평점에 따라 채워질 별의 개수 결정
     const getImageUrl = (path) => `https://image.tmdb.org/t/p/w500/${path}`;
 
@@ -86,7 +86,7 @@ const DetailContainer = styled.div`
     width: 1600px;
     height: 100vh;
     margin: 0 auto;
-    padding: 0 20px; /* 좌우 여백 추가 */
+    padding: 0 20px;
 `;
 
 const Poster = styled.img`

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Navbar = () => {
-    // 로그인 상태를 추적하기 위한 state 설정
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     // 로그인 버튼 클릭 시 로그인 상태 변경
