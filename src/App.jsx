@@ -30,7 +30,7 @@ function App() {
                 <Route path="/nowplaying" element={<NowPlayingPage />} />
                 <Route path="/toprated" element={<TopRatedPage />} />
                 <Route path="/upcoming" element={<UpcomingPage />} />
-                <Route path="/movie/:title" element={<MovieDetailPage />} />
+                <Route path="/movie/:id" element={<MovieDetailPage />} />
             </Routes>
         </Router>
     );

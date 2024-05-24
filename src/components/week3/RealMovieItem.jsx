@@ -9,11 +9,11 @@ const RealMovieItem = ({ movie }) => {
     const navigate = useNavigate();
 
     const handlePosterClick = () => {
-        navigate(`/movie/${encodeURIComponent(movie.title)}`);
+        navigate(`/movie/${movie.id}`);
     };
 
     const handleTitleClick = () => {
-        navigate(`/movie/${encodeURIComponent(movie.title)}`);
+        navigate(`/movie/${movie.id}`);
     };
 
     return (

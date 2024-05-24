@@ -6,28 +6,32 @@ import Navbar from '../../components/week3/Navbar';
 
 const MovieDetailPage = () => {
     const [movie, setMovie] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
     const API_KEY = 'd5b7149c32045a933d62bc087867582c';
-    const { title } = useParams(); // useParams 훅 사용하여 URL 매개변수 읽기
+    const { id } = useParams(); // useParams 훅 사용하여 URL 매개변수 읽기
 
     useEffect(() => {
         const fetchMovie = async () => {
             try {
-                const response = await axios.get(
-                    `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${title}`
-                );
-                const data = response.data.results[0];
-                setMovie(data);
-                console.log('API 호출 완료');
+                const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`);
+                setMovie(response.data);
+                setIsLoading(false);
             } catch (error) {
                 console.error('영화 가져오기 오류:', error);
+                setError(error);
+                setIsLoading(false);
             }
         };
         fetchMovie();
-    }, [API_KEY, title]);
+    }, [API_KEY, id]);
 
-    if (!movie) {
-        console.log('로딩 중...');
-        return <div>Loading...</div>;
+    if (isLoading) {
+        return <Loading>데이터를 받아오는 중 입니다...</Loading>;
+    }
+
+    if (error) {
+        return <Error>영화 정보를 가져오는 중 오류가 발생했습니다.</Error>;
     }
 
     // 줄거리를 표시하는 함수
@@ -69,6 +73,24 @@ const MovieDetailPage = () => {
         </Container>
     );
 };
+
+const Loading = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 24px;
+    color: white;
+`;
+
+const Error = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 24px;
+    color: red;
+`;
 
 const Container = styled.div`
     background-color: #223a68;

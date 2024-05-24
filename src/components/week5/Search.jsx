@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 import RealMovieItem from '../week3/RealMovieItem';
@@ -9,29 +9,38 @@ const Search = () => {
     const navigate = useNavigate();
     const API_KEY = 'd5b7149c32045a933d62bc087867582c';
 
-    const handleSearchChange = (e) => {
-        setSearchQuery(e.target.value);
+    const debounce = (func, delay) => {
+        let debounceTimer;
+        return (...args) => {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => func(...args), delay);
+        };
     };
 
-    useEffect(() => {
-        const fetchSearchResults = async () => {
+    const fetchSearchResults = useCallback(
+        debounce(async (query) => {
             try {
                 const response = await fetch(
-                    `https://api.themoviedb.org/3/search/movie?query=${searchQuery}&api_key=${API_KEY}`
+                    `https://api.themoviedb.org/3/search/movie?query=${query}&api_key=${API_KEY}`
                 );
                 const data = await response.json();
                 setSearchResult(data.results);
             } catch (error) {
                 console.error('Error searching for movies:', error);
             }
-        };
+        }, 500),
+        []
+    );
 
-        if (searchQuery) {
-            fetchSearchResults();
+    const handleSearchChange = (e) => {
+        const query = e.target.value;
+        setSearchQuery(query);
+        if (query) {
+            fetchSearchResults(query);
         } else {
             setSearchResult([]);
         }
-    }, [searchQuery]);
+    };
 
     return (
         <Wrapper>
