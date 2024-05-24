@@ -1,12 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import styled from 'styled-components';
-import { useNavigate } from 'react-router-dom';
 import RealMovieItem from '../week3/RealMovieItem';
 
 const Search = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResult, setSearchResult] = useState([]);
-    const navigate = useNavigate();
     const API_KEY = 'd5b7149c32045a933d62bc087867582c';
 
     const debounce = (func, delay) => {
