@@ -33,7 +33,7 @@ const RealMovieItem = ({ movie }) => {
             )}
             <TitleWrapper>
                 <span>{movie.title}</span>
-                <span>{movie.popularity}</span>
+                <span>⭐️{movie.popularity}</span>
             </TitleWrapper>
         </MovieContainer>
     );

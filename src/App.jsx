@@ -13,7 +13,7 @@ import UpcomingPage from './pages/week3/Upcoming';
 import MovieDetailPage from './pages/week4/MovieDetailPage';
 import NotFoundPage from './pages/week4/NotFoundPage';
 import MovieSignup from './pages/week5/MovieSignup';
-import Navbar from './components/week3/Navbar';
+import GlobalStyle from './styles/GlobalStyle';
 function App() {
     return (
         <Router>

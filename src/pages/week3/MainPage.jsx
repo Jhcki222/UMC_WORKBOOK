@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../../components/week3/Navbar';
 import styled from 'styled-components';
+import Search from '../../components/week5/Search';
 
 export default function MainPage() {
     return (
@@ -11,11 +12,8 @@ export default function MainPage() {
 
                 <SearchContainer>
                     <FindMovies>Find your movies!</FindMovies>
-                    <Container>
-                        <SearchInput type="text" />
-                        <SearchButton>검색</SearchButton>
-                    </Container>
                 </SearchContainer>
+                <Search />
             </Wrapper>
         </>
     );

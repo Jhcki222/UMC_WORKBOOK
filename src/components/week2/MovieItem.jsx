@@ -43,7 +43,7 @@ const Poster = styled.img`
     width: 100%;
     /* 영화 설명이 표시될 때 포스터 이미지를 어둡게 처리 */
     filter: ${(props) => (props.showDescription ? 'brightness(70%)' : 'brightness(100%)')};
-    transition: filter 0.3s ease-in-out; /* 변화가 자연스럽게 일어나도록 transition 설정 */
+    transition: filter 0.3s ease-in-out; 
 `;
 
 // 영화 설명 오버레이
@@ -53,7 +53,7 @@ const DescriptionOverlay = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* 반투명한 검은색 */
+    background-color: rgba(0, 0, 0, 0.7); 
     color: #fff;
     display: flex;
     align-items: center;
